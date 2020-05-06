@@ -2,7 +2,7 @@
 
 require_once 'C:/Users/acer/Desktop/paynow/paynow/autoloader.php';
 
-$host = 'localhost';
+$host = 'supercode.co.zw';
 $db = 'fkdmqrpy_paynow';
 $username = 'fkdmqrpy_super';
 $password = '9g00isho9Gisho075';
