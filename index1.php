@@ -18,6 +18,7 @@ try{
 }catch (PDOException $e){
  // report error message
  echo $e->getMessage();
+ echo 'fail';
 }
 
 $email = $_GET['email'];
