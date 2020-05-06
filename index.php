@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+	require_once 'paynow/autoloader.php'; 
+?>
 <head>
 	<title>Paynow Prototype</title>
 	<meta charset="UTF-8">
