@@ -1,6 +1,6 @@
 <?php 
 
-require_once 'C:/Users/acer/Desktop/paynow/paynow/autoloader.php';
+require_once 'paynow/autoloader.php';
 $host = 'supercode.co.zw';
 $db = 'fkdmqrpy_paynow';
 $username = 'fkdmqrpy_super';
