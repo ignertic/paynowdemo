@@ -21,8 +21,8 @@ require_once 'paynow/autoloader.php';
 //  echo 'fail';
 // }
 $email = $_GET['email'];
-$f = $email . '.txt';
-$file = fopen($f, 'w');
+// $f = $email . '.txt';
+// $file = fopen($f, 'w');
 // fwrite($file, $email);
 // fclose($file);s
 
@@ -44,11 +44,11 @@ $payment->add('Bananas', floatval($amount));
 $response = $paynow->send($payment);
 $poll = $response->pollUrl();
 $status = 'unknown';
-fwrite($file, $poll);
+// fwrite($file, $poll);
 // $conn->query("INSERT INTO transactions (email, poll, status) VALUES ('" . $email . "', '" . $poll . "', '" . $status . "')");
 $url = 'Location: ' . $response->redirectUrl(); // http://www.example.com/another-page.php'
 // add poll url to databse with email key
-fclose($file);
+// fclose($file);
 header($url);
 // // var_dump($response);
 
