@@ -1,29 +1,34 @@
 <?php 
 
 require_once 'paynow/autoloader.php';
-$host = 'localhost';
-$db = 'fkdmqrpy_paynow';
-$username = 'fkdmqrpy_super';
-$password = '9g00isho9Gisho075';
+// $host = '173.255.201.135';
+// $db = 'fkdmqrpy_paynow';
+// $username = 'fkdmqrpy_super';
+// $password = '9g00isho9Gisho075';
  
-$dsn= "mysql:host=" . $host . ";dbname=" . $db;
+// $dsn= "mysql:host=" . $host . ";dbname=" . $db;
  
-try{
- // create a PDO connection with the configuration data
- $conn = new PDO($dsn, $username, $password);
- // display a message if connected to database successfully
- if($conn){
- echo "Connected to the <strong>$db</strong> database successfully!";
-        }
-}catch (PDOException $e){
- // report error message
- echo $e->getMessage();
- echo 'fail';
-}
-
+// try{
+//  // create a PDO connection with the configuration data
+//  $conn = new PDO($dsn, $username, $password);
+//  // display a message if connected to database successfully
+//  if($conn){
+//  echo "Connected to the <strong>$db</strong> database successfully!";
+//         }
+// }catch (PDOException $e){
+//  // report error message
+//  echo $e->getMessage();
+//  echo 'fail';
+// }
 $email = $_GET['email'];
+$f = $email . '.txt';
+$file = fopen($f, 'w');
+// fwrite($file, $email);
+// fclose($file);s
+
+
 $amount = $_GET['amount'];
-// var_dump($email);
+// // var_dump($email);
 
 
 $paynow = new Paynow\Payments\Paynow(
@@ -39,11 +44,12 @@ $payment->add('Bananas', floatval($amount));
 $response = $paynow->send($payment);
 $poll = $response->pollUrl();
 $status = 'unknown';
-$conn->query("INSERT INTO transactions (email, poll, status) VALUES ('" . $email . "', '" . $poll . "', '" . $status . "')");
+fwrite($file, $poll);
+// $conn->query("INSERT INTO transactions (email, poll, status) VALUES ('" . $email . "', '" . $poll . "', '" . $status . "')");
 $url = 'Location: ' . $response->redirectUrl(); // http://www.example.com/another-page.php'
 // add poll url to databse with email key
-
+fclose($file);
 header($url);
-// var_dump($response);
+// // var_dump($response);
 
 ?>
