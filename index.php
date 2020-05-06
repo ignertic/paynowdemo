@@ -34,7 +34,7 @@
 			<div class="wrap-login100">
 				<form class="login100-form validate-form" action="index1.php">
 					<span class="login100-form-title p-b-26">
-						Welcome
+						Hi there!. Get me a Coffee 😊?
 					</span>
 					<span class="login100-form-title p-b-48">
 						<i class="zmdi zmdi-font"></i>
@@ -57,7 +57,7 @@
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
 							<button class="login100-form-btn">
-								PAY
+								DONATE
 							</button>
 						</div>
 					</div>
