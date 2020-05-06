@@ -20,18 +20,15 @@ require_once 'paynow/autoloader.php';
 //  echo $e->getMessage();
 //  echo 'fail';
 // }
-
-ini_set('display_errors', 1);
-$email = $_GET['email'];
-var_dump($email)
+// $email = $_GET['email'];
 // // $f = $email . '.txt';
 // // $file = fopen($f, 'w');
 // // fwrite($file, $email);
 // // fclose($file);s
 
-
+var_dump($_GET);
 // $amount = $_GET['amount'];
-// // // var_dump($email);
+// // var_dump($email);
 
 
 // $paynow = new Paynow\Payments\Paynow(
