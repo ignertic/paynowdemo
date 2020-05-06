@@ -3,16 +3,16 @@
 require_once 'C:/Users/acer/Desktop/paynow/paynow/autoloader.php';
 
 $host = 'localhost';
-$db = 'paynow';
-$username = 'supercode';
-$password = '9g00isho';
+$db = 'fkdmqrpy_paynow';
+$username = 'fkdmqrpy_super';
+$password = '9g00isho9Gisho075';
 $email = $_GET['email'];
 
 $paynow = new Paynow\Payments\Paynow(
     '6054',
     '960ad10a-fc0c-403b-af14-e9520a50fbf4',
-    'http://localhost/success.php?email=' . $email,
-    'http://localhost/payment.php',
+    'https://paynow.supercode.co.zw/success.php?email=' . $email,
+    'https://paynow.supercode.co.zw/payment.php',
     
 );
 // require_once 'dbconfig.php';
