@@ -26,7 +26,7 @@ require_once 'paynow/autoloader.php';
 // // fwrite($file, $email);
 // // fclose($file);s
 
-var_dump($_GET);
+// var_dump($_GET);
 // $amount = $_GET['amount'];
 // // var_dump($email);
 
