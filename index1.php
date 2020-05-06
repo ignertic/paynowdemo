@@ -20,6 +20,8 @@ require_once 'paynow/autoloader.php';
 //  echo $e->getMessage();
 //  echo 'fail';
 // }
+
+ini_set('display_errors', 1);
 $email = $_GET['email'];
 var_dump($email)
 // // $f = $email . '.txt';
