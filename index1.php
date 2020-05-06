@@ -46,7 +46,7 @@ require_once 'paynow/autoloader.php';
 // $status = 'unknown';
 // fwrite($file, $poll);
 // $conn->query("INSERT INTO transactions (email, poll, status) VALUES ('" . $email . "', '" . $poll . "', '" . $status . "')");
-$url = 'Location: ' . $response->redirectUrl(); // http://www.example.com/another-page.php'
+// $url = 'Location: ' . $response->redirectUrl(); // http://www.example.com/another-page.php'
 // add poll url to databse with email key
 // fclose($file);
 // header($url);
