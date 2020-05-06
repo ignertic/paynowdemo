@@ -1,7 +1,7 @@
 <?php 
 
 require_once 'paynow/autoloader.php';
-$host = 'supercode.co.zw';
+$host = 'localhost';
 $db = 'fkdmqrpy_paynow';
 $username = 'fkdmqrpy_super';
 $password = '9g00isho9Gisho075';
