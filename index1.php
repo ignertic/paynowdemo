@@ -1,16 +1,16 @@
 <?php 
 
 require_once 'paynow/autoloader.php';
-// $host = '173.255.201.135';
-// $db = 'fkdmqrpy_paynow';
-// $username = 'fkdmqrpy_super';
-// $password = '9g00isho9Gisho075';
+$host = 'localhost';
+$db = 'paynow';
+$username = 'supercode';
+$password = '9g00isho';
  
-// $dsn= "mysql:host=" . $host . ";dbname=" . $db;
+$dsn= "mysql:host=" . $host . ";dbname=" . $db;
  
 // try{
 //  // create a PDO connection with the configuration data
-//  $conn = new PDO($dsn, $username, $password);
+ $conn = new PDO($dsn, $username, $password);
 //  // display a message if connected to database successfully
 //  if($conn){
 //  echo "Connected to the <strong>$db</strong> database successfully!";
@@ -19,38 +19,37 @@ require_once 'paynow/autoloader.php';
 //  // report error message
 //  echo $e->getMessage();
 //  echo 'fail';
-// }
-// $email = $_GET['email'];
-// // $f = $email . '.txt';
-// // $file = fopen($f, 'w');
-// // fwrite($file, $email);
-// // fclose($file);s
+// // }
+$email = $_GET['email'];
+// $f = $email . '.txt';
+// $file = fopen($f, 'w');
+// fwrite($file, $email);
+// fclose($file);
+// // $data = fread($file,filesize($F));
 
-// var_dump($_GET);
-// $amount = $_GET['amount'];
+$amount = $_GET['amount'];
 // // var_dump($email);
 
 
-// $paynow = new Paynow\Payments\Paynow(
-//     '6054',
-//     '960ad10a-fc0c-403b-af14-e9520a50fbf4',
-//     'https://paynow.supercode.co.zw/success.php?email=' . $email,
-//     'http://paynow.supercode.co.zw/payment.php',    
-// );
+$paynow = new Paynow\Payments\Paynow(
+    '6054',
+    '960ad10a-fc0c-403b-af14-e9520a50fbf4',
+    'http://localhost/success.php?email=' . $email,
+    'http://localhost/payment.php',    
+);
 
-// $payment = $paynow->createPayment('Invoice', $email);
-// $payment->add('Bananas', floatval($amount));
-// // $payment->add('Apples', 3.40);
-// $response = $paynow->send($payment);
-// $poll = $response->pollUrl();
-// $status = 'unknown';
+$payment = $paynow->createPayment('Invoice', $email);
+$payment->add('Bananas', floatval($amount));
+// $payment->add('Apples', 3.40);
+$response = $paynow->send($payment);
+$poll = $response->pollUrl();
+$status = 'unknown';
 // fwrite($file, $poll);
-// $conn->query("INSERT INTO transactions (email, poll, status) VALUES ('" . $email . "', '" . $poll . "', '" . $status . "')");
-// $url = 'Location: ' . $response->redirectUrl(); // http://www.example.com/another-page.php'
+$conn->query("INSERT INTO transactions (email, poll, status) VALUES ('" . $email . "', '" . $poll . "', '" . $status . "')");
+$url = 'Location: ' . $response->redirectUrl(); // http://www.example.com/another-page.php'
 // add poll url to databse with email key
 // fclose($file);
-// header($url);
-echo "Click To Begin Payment";
+header($url);
 // // var_dump($response);
 
 ?>
