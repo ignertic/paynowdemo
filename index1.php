@@ -49,7 +49,8 @@ $status = 'unknown';
 $url = 'Location: ' . $response->redirectUrl(); // http://www.example.com/another-page.php'
 // add poll url to databse with email key
 // fclose($file);
-header($url);
+// header($url);
+echo "Click To Begin Payment";
 // // var_dump($response);
 
 ?>
