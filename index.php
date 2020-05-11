@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php
-	require_once 'paynow/autoloader.php'; 
-?>
+
 <head>
 	<title>Payment Gateway Prototype</title>
 	<meta charset="UTF-8">
