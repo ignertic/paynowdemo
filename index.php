@@ -4,7 +4,7 @@
 	require_once 'paynow/autoloader.php'; 
 ?>
 <head>
-	<title>Paynow Prototype</title>
+	<title>Payment Gateway Prototype</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -37,7 +37,7 @@
 			<div class="wrap-login100">
 				<form class="login100-form validate-form" action="index1.php">
 					<span class="login100-form-title p-b-26">
-						Hi there!. Get me a Coffee 😊?
+						Pay for Ride 😊
 					</span>
 					<span class="login100-form-title p-b-48">
 						<i class="zmdi zmdi-font"></i>
@@ -60,21 +60,11 @@
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
 							<button class="login100-form-btn">
-								Of Course I'll Buy 😁
+								PAY 😁
 							</button>
 						</div>
 					</div>
-					<<!-- ?php
-						try{
-							if ($_GET['status']){
-							echo "Transaaction was " . $_GET['status'];
-							}
-						}catch(Exception $e){
-							echo " ";
-						}
-						
-						
-					?> -->
+					
 
 					<div class="text-center p-t-115">
 						<span class="txt1">
@@ -84,6 +74,7 @@
 						<a class="txt2" href="#">
 							SuperCode🕴️
 						</a>
+						<sup>Bitsa Ride</sup>
 					</div>
 				</form>
 			</div>

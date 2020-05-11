@@ -8,11 +8,11 @@ $password = '9g00isho';
  
 $dsn= "mysql:host=" . $host . ";dbname=" . $db;
  
-// try{
-//  // create a PDO connection with the configuration data
- $conn = new PDO($dsn, $username, $password);
-//  // display a message if connected to database successfully
-//  if($conn){
+// // try{
+// //  // create a PDO connection with the configuration data
+//  $conn = new PDO($dsn, $username, $password);
+// //  // display a message if connected to database successfully
+// //  if($conn){
 //  echo "Connected to the <strong>$db</strong> database successfully!";
 //         }
 // }catch (PDOException $e){
@@ -45,7 +45,7 @@ $response = $paynow->send($payment);
 $poll = $response->pollUrl();
 $status = 'unknown';
 // fwrite($file, $poll);
-$conn->query("INSERT INTO transactions (email, poll, status) VALUES ('" . $email . "', '" . $poll . "', '" . $status . "')");
+//$conn->query("INSERT INTO transactions (email, poll, status) VALUES ('" . $email . "', '" . $poll . "', '" . $status . "')");
 $url = 'Location: ' . $response->redirectUrl(); // http://www.example.com/another-page.php'
 // add poll url to databse with email key
 // fclose($file);
